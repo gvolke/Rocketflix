@@ -42,7 +42,7 @@ main p {
 }
 
 .title {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bolder;
 }
 
@@ -70,4 +70,8 @@ main p {
     flex-direction: row;   
     align-items: center;
     gap: 20px;
+}
+
+.movies-container p {
+    text-align: justify;
 }

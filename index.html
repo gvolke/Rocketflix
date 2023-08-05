@@ -10,24 +10,26 @@
 </head>
 <body>    
     <main>
-        <img src="./Images/favico/android-chrome-192x192.png" height="100" width="100" alt="logo image">
+        <img src="./Images/favico/android-chrome-192x192.png" height="80" width="80" alt="logo image">
         <div class="title">Não sabe o que assistir?</div>       
              
         <div class="movies-container">
-            <div class="movie-image">
-                <img src="" alt="">
+            <div>
+                <img id="movieImage" src="" alt="">
             </div>
             <div class="movie-desciption">
-                <h3></h3>
-                <p></p>
+                <h3 id="movieTitle"></h3>
+                <p id="movieOverview"></p>
             </div>
         </div>
         
-        <div class="button">
+        <div class="button" onclick="getMovie()">
             <img src="./Images/favico/favicon-32x32.png" alt="">
             Encontrar Filme
         </div>
         <p>Clique em "Encontrar filme" que traremos informações de algum filme para você assistir hoje</p>        
     </main>    
+
+    <script src="main.js"></script>
 </body>
 </html>
