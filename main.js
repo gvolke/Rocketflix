@@ -25,7 +25,21 @@ function returnMovieData(movieId) {
     return fetch(url)
             .then(response => response.json())
             .then(data => {
+                const releaseDate = new Date(data.release_date)
+                const movieGenre = []
+
+                let genres = []
+                genres.push(data.genres)
+                
+                for (var genre of genres) {
+                    for (var i = 0; i < genre.length; i++) {
+                        movieGenre.push(genre[i].name);
+                    }
+                }
+
                 movieTitle.textContent = data.title
+                movieYear.textContent = 'Ano: ' + releaseDate.getFullYear() 
+                movieGenres.textContent = 'Gêneros: ' + movieGenre.join(', ')
                 movieOverview.textContent = data.overview
                 movieImage.src = IMG_URL + data.poster_path
             })

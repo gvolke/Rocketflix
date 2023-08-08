@@ -65,13 +65,57 @@ main p {
     cursor: pointer;
 }
 
+.movie-desciption {
+    display: flex;
+    flex-direction: column; 
+
+    gap: 10px;
+}
+
 .movies-container {
     display: flex;
     flex-direction: row;   
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 20px;
 }
 
 .movies-container p {
     text-align: justify;
+}
+
+#movieGenres, #movieYear{
+    font-size: 15px;
+    font-weight: 400;
+
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) { 
+    .movies-container p {
+        width: auto;
+    }
+
+    .movies-container h3 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) { 
+    .movies-container p, main p {
+        width: auto;
+    }
+
+    .movies-container h3 {
+        text-align: center;
+    }
+
+    body {
+        height: auto;
+    }
+
+    main {
+        gap: 50px;
+    }
 }
