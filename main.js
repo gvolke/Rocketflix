@@ -47,8 +47,8 @@ function returnMovieData(movieId) {
 }
 
 async function getMovie() { 
-    movieImage.height = 300
-    movieImage.width = 200
+    movieImage.height = 243.773
+    movieImage.width = 171
 
     let id = Math.floor(Math.random() * 1000) + 1;  
 
